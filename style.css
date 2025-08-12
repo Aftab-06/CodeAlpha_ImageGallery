@@ -1,0 +1,30 @@
+
+        .gallery-item {
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .lightbox {
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-content {
+            transition: transform 0.3s ease;
+        }
+        .lightbox.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .lightbox.show .lightbox-content {
+            transform: scale(1);
+        }
+        .filter-btn.active {
+            background-color: #0d9488;
+            color: white;
+        }
+        .image-filter {
+            transition: filter 0.3s ease;
+        }
+    

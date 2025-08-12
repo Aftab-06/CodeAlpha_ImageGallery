@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="your_verification_code_here" />
+    <meta name="google-site-verification" content="your_verification_code_here" />
+    <title>Modern Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Modern Image Gallery</h1>
+        
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button class="filter-btn active px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="nature">Nature</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="architecture">Architecture</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="animals">Animals</button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="people">People</button>
+        </div>
+        
+        <!-- Image Filters -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button class="image-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="normal">Normal</button>
+            <button class="image-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="grayscale">Grayscale</button>
+            <button class="image-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="sepia">Sepia</button>
+            <button class="image-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="blur">Blur</button>
+            <button class="image-filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" data-filter="brightness">Bright</button>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery">
+            <!-- Nature Images -->
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="nature">
+                <img src="Forest Landscape.webp" alt="Nature" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Forest Landscape</h3>
+                    <p class="text-gray-600">Beautiful green forest with sunlight</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="nature">
+                <img src="Mountain View.jpg" alt="Mountain" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Mountain View</h3>
+                    <p class="text-gray-600">Snowy mountain peaks at sunrise</p>
+                </div>
+            </div>
+            
+            <!-- Architecture Images -->
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="architecture">
+                <img src="Modern Building.webp" alt="Architecture" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Modern Building</h3>
+                    <p class="text-gray-600">Contemporary architecture design</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="architecture">
+                <img src="City Skyline.webp" alt="Urban" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">City Skyline</h3>
+                    <p class="text-gray-600">Urban landscape at night</p>
+                </div>
+            </div>
+            
+            <!-- Animal Images -->
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="animals">
+                <img src="Wild Lion.jpg" alt="Lion" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Wild Lion</h3>
+                    <p class="text-gray-600">Majestic lion in the savanna</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="animals">
+                <img src="Happy Dog.webp" alt="Dog" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Happy Dog</h3>
+                    <p class="text-gray-600">Cute dog playing in the park</p>
+                </div>
+            </div>
+            
+            <!-- People Images -->
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="people">
+                <img src="Portrait people.jpg" alt="Portrait" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Portrait</h3>
+                    <p class="text-gray-600">Beautiful man portrait</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="people">
+                <img src="Portrait old.jpg" alt="Portrait" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Man Portrait</h3>
+                    <p class="text-gray-600">Serious man looking at camera</p>
+                </div>
+            </div>
+            
+            <!-- Additional Images -->
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="nature">
+                <img src="Waterfall.jpg" alt="Waterfall" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Waterfall</h3>
+                    <p class="text-gray-600">Powerful waterfall in the jungle</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="architecture">
+                <img src="modern Interior.webp" alt="Interior" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Modern Interior</h3>
+                    <p class="text-gray-600">Elegant living room design</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="animals">
+                <img src="Sleeping Cat.webp" alt="Cat" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Sleeping Cat</h3>
+                    <p class="text-gray-600">Cute cat napping in the sun</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item overflow-hidden rounded-lg shadow-md bg-white cursor-pointer" data-category="people">
+                <img src="Playing Kids.jpg" alt="Children" class="w-full h-64 object-cover image-filter">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Playing Kids</h3>
+                    <p class="text-gray-600">Children playing in the park</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lightbox -->
+    <div class="lightbox fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 opacity-0 pointer-events-none transition">
+        <div class="lightbox-content relative max-w-4xl w-full p-4">
+            <button class="absolute top-4 right-4 text-white text-3xl z-50 hover:text-gray-300" id="close-lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="relative">
+                <img id="lightbox-image" src="" alt="" class="w-full max-h-screen-80 object-contain">
+                <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 text-white p-3 rounded-full hover:bg-opacity-50 transition" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 text-white p-3 rounded-full hover:bg-opacity-50 transition" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="text-white mt-4 text-center">
+                <h3 id="lightbox-title" class="text-xl font-semibold"></h3>
+                <p id="lightbox-desc" class="text-gray-300"></p>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center mt-20 text-slate-900 text-sm">
+            <p>© 2025 | This website is created by <span class="font-semibold text-blue-700">Aftab Hussain</span> for educational purposes only. 
+                <br>
+                 <a href="privacy.html" class="hover:text-blue-700">Privacy Policy</a> | <a href="terms.html" class="hover:text-blue-700">Terms of Service</a></p>
+    </footer>
+    
+   <script src="script.js"></script>
+</body>
+</html>
